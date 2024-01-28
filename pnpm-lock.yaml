@@ -80,8 +80,8 @@ devDependencies:
     specifier: ^0.58.4
     version: 0.58.4(postcss@8.4.33)(vite@5.0.12)
   unplugin-env-parsing:
-    specifier: ^0.0.3
-    version: 0.0.3
+    specifier: ^0.0.5
+    version: 0.0.5
   zx:
     specifier: ^7.2.3
     version: 7.2.3
@@ -10955,8 +10955,8 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
-  /unplugin-env-parsing@0.0.3:
-    resolution: {integrity: sha512-GFGzyFAaRT24PLGP4cdf0bWJRqkTcaBWwFm6Yxos/yMmwZRCs5XqGyBTbLkUGU3KbmiCvqBGCXkJhY2Zv6jrRw==}
+  /unplugin-env-parsing@0.0.5:
+    resolution: {integrity: sha512-BerS6Rg+cK87CnexlwHgS5Ar+7R9PDRBIPgVkici5fY1AlCeonVv6koHnbOIcfuwUQYW4fXlv09G5uM72wbzAg==}
     dependencies:
       kolorist: 1.8.0
       slash: 3.0.0
