@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "./index.module.css";
-import { PropsWithChildren } from "react";
+import Image from 'next/image'
+import { Inter } from 'next/font/google'
+import { PropsWithChildren } from 'react'
+import styles from './index.module.css'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Layout(props: PropsWithChildren) {
   return (
@@ -20,7 +20,8 @@ export default function Layout(props: PropsWithChildren) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              By{" "}
+              By
+              {' '}
               <Image
                 src="/vercel.svg"
                 alt="Vercel Logo"
@@ -53,7 +54,9 @@ export default function Layout(props: PropsWithChildren) {
             rel="noopener noreferrer"
           >
             <h2>
-              Docs <span>-&gt;</span>
+              Docs
+              {' '}
+              <span>-&gt;</span>
             </h2>
             <p>
               Find in-depth information about Next.js features and&nbsp;API.
@@ -67,7 +70,9 @@ export default function Layout(props: PropsWithChildren) {
             rel="noopener noreferrer"
           >
             <h2>
-              Learn <span>-&gt;</span>
+              Learn
+              {' '}
+              <span>-&gt;</span>
             </h2>
             <p>
               Learn about Next.js in an interactive course with&nbsp;quizzes!
@@ -81,7 +86,9 @@ export default function Layout(props: PropsWithChildren) {
             rel="noopener noreferrer"
           >
             <h2>
-              Templates <span>-&gt;</span>
+              Templates
+              {' '}
+              <span>-&gt;</span>
             </h2>
             <p>
               Discover and deploy boilerplate example Next.js&nbsp;projects.
@@ -95,7 +102,9 @@ export default function Layout(props: PropsWithChildren) {
             rel="noopener noreferrer"
           >
             <h2>
-              Deploy <span>-&gt;</span>
+              Deploy
+              {' '}
+              <span>-&gt;</span>
             </h2>
             <p>
               Instantly deploy your Next.js site to a shareable URL
@@ -105,5 +114,5 @@ export default function Layout(props: PropsWithChildren) {
         </div>
       </main>
     </>
-  );
+  )
 }

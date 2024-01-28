@@ -1,63 +1,62 @@
 import {
-  ContractTransaction,
-  ContractInterface,
   BytesLike as Arrayish,
   BigNumber,
   BigNumberish,
-} from 'ethers';
-import { EthersContractContextV5 } from 'ethereum-abi-types-generator';
+  ContractTransaction,
+} from 'ethers'
+import { EthersContractContextV5 } from 'ethereum-abi-types-generator'
 
 export type ContractContext = EthersContractContextV5<
   ERC20,
   ERC20MethodNames,
   ERC20EventsContext,
   ERC20Events
->;
+>
 
-export declare type EventFilter = {
-  address?: string;
-  topics?: Array<string>;
-  fromBlock?: string | number;
-  toBlock?: string | number;
-};
+export declare interface EventFilter {
+  address?: string
+  topics?: Array<string>
+  fromBlock?: string | number
+  toBlock?: string | number
+}
 
 export interface ContractTransactionOverrides {
   /**
    * The maximum units of gas for the transaction to use
    */
-  gasLimit?: number;
+  gasLimit?: number
   /**
    * The price (in wei) per unit of gas
    */
-  gasPrice?: BigNumber | string | number | Promise<any>;
+  gasPrice?: BigNumber | string | number | Promise<any>
   /**
    * The nonce to use in the transaction
    */
-  nonce?: number;
+  nonce?: number
   /**
    * The amount to send with the transaction (i.e. msg.value)
    */
-  value?: BigNumber | string | number | Promise<any>;
+  value?: BigNumber | string | number | Promise<any>
   /**
    * The chain ID (or network ID) to use
    */
-  chainId?: number;
+  chainId?: number
 }
 
 export interface ContractCallOverrides {
   /**
    * The address to execute the call as
    */
-  from?: string;
+  from?: string
   /**
    * The maximum units of gas for the transaction to use
    */
-  gasLimit?: number;
+  gasLimit?: number
 }
-export type ERC20Events = 'Approval' | 'Transfer';
+export type ERC20Events = 'Approval' | 'Transfer'
 export interface ERC20EventsContext {
-  Approval(...parameters: any): EventFilter;
-  Transfer(...parameters: any): EventFilter;
+  Approval(...parameters: any): EventFilter
+  Transfer(...parameters: any): EventFilter
 }
 export type ERC20MethodNames =
   | 'DOMAIN_SEPARATOR'
@@ -71,16 +70,16 @@ export type ERC20MethodNames =
   | 'symbol'
   | 'totalSupply'
   | 'transfer'
-  | 'transferFrom';
+  | 'transferFrom'
 export interface ApprovalEventEmittedResponse {
-  owner: string;
-  spender: string;
-  amount: BigNumberish;
+  owner: string
+  spender: string
+  amount: BigNumberish
 }
 export interface TransferEventEmittedResponse {
-  from: string;
-  to: string;
-  amount: BigNumberish;
+  from: string
+  to: string
+  amount: BigNumberish
 }
 export interface ERC20 {
   /**
@@ -89,7 +88,7 @@ export interface ERC20 {
    * StateMutability: view
    * Type: function
    */
-  DOMAIN_SEPARATOR(overrides?: ContractCallOverrides): Promise<string>;
+  DOMAIN_SEPARATOR(overrides?: ContractCallOverrides): Promise<string>
   /**
    * Payable: false
    * Constant: true
@@ -102,7 +101,7 @@ export interface ERC20 {
     parameter0: string,
     parameter1: string,
     overrides?: ContractCallOverrides
-  ): Promise<BigNumber>;
+  ): Promise<BigNumber>
   /**
    * Payable: false
    * Constant: false
@@ -115,7 +114,7 @@ export interface ERC20 {
     spender: string,
     amount: BigNumberish,
     overrides?: ContractTransactionOverrides
-  ): Promise<ContractTransaction>;
+  ): Promise<ContractTransaction>
   /**
    * Payable: false
    * Constant: true
@@ -126,21 +125,21 @@ export interface ERC20 {
   balanceOf(
     parameter0: string,
     overrides?: ContractCallOverrides
-  ): Promise<BigNumber>;
+  ): Promise<BigNumber>
   /**
    * Payable: false
    * Constant: true
    * StateMutability: view
    * Type: function
    */
-  decimals(overrides?: ContractCallOverrides): Promise<number>;
+  decimals(overrides?: ContractCallOverrides): Promise<number>
   /**
    * Payable: false
    * Constant: true
    * StateMutability: view
    * Type: function
    */
-  name(overrides?: ContractCallOverrides): Promise<string>;
+  name(overrides?: ContractCallOverrides): Promise<string>
   /**
    * Payable: false
    * Constant: true
@@ -151,7 +150,7 @@ export interface ERC20 {
   nonces(
     parameter0: string,
     overrides?: ContractCallOverrides
-  ): Promise<BigNumber>;
+  ): Promise<BigNumber>
   /**
    * Payable: false
    * Constant: false
@@ -174,21 +173,21 @@ export interface ERC20 {
     r: Arrayish,
     s: Arrayish,
     overrides?: ContractTransactionOverrides
-  ): Promise<ContractTransaction>;
+  ): Promise<ContractTransaction>
   /**
    * Payable: false
    * Constant: true
    * StateMutability: view
    * Type: function
    */
-  symbol(overrides?: ContractCallOverrides): Promise<string>;
+  symbol(overrides?: ContractCallOverrides): Promise<string>
   /**
    * Payable: false
    * Constant: true
    * StateMutability: view
    * Type: function
    */
-  totalSupply(overrides?: ContractCallOverrides): Promise<BigNumber>;
+  totalSupply(overrides?: ContractCallOverrides): Promise<BigNumber>
   /**
    * Payable: false
    * Constant: false
@@ -201,7 +200,7 @@ export interface ERC20 {
     to: string,
     amount: BigNumberish,
     overrides?: ContractTransactionOverrides
-  ): Promise<ContractTransaction>;
+  ): Promise<ContractTransaction>
   /**
    * Payable: false
    * Constant: false
@@ -216,5 +215,5 @@ export interface ERC20 {
     to: string,
     amount: BigNumberish,
     overrides?: ContractTransactionOverrides
-  ): Promise<ContractTransaction>;
+  ): Promise<ContractTransaction>
 }

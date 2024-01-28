@@ -2,8 +2,8 @@ const antfu = require('@antfu/eslint-config').default
 
 module.exports = antfu({
   typescript: true,
-  vue: false,
   react: true,
+  vue: false,
   rules: {
     'ts/consistent-type-imports': 'off',
     'ts/no-require-imports': 'off',
