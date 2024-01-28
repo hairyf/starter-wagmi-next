@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "antfu.iconify",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "VisualStudioExptTeam.intellicode-api-usage-examples",
+    "lokalise.i18n-ally",
+    "antfu.unocss",
+    "statelyai.stately-vscode",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
