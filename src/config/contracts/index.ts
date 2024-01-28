@@ -1,8 +1,6 @@
-import * as abis from './abis'
-import { addresses } from './address'
+import * as interfaces from '../interfaces'
+import { addresses } from '../addresses'
 
 export const contracts = {
-  ERC20: { abi: abis.ERC20Fragment, address: addresses.ERC20 },
+  ERC20: { interface: interfaces.ERC20, address: addresses.ZERO },
 }
-
-export * from './abis'

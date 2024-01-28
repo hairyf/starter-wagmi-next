@@ -1,20 +1,22 @@
 import { connectorsForWallets, getDefaultWallets } from '@rainbow-me/rainbowkit'
+import type { CreateConfigParameters } from 'wagmi'
 import { createConfig, http } from 'wagmi'
-import { goerli, mainnet, sepolia } from 'wagmi/chains'
+import { goerli, mainnet } from 'wagmi/chains'
 
-const { wallets } = getDefaultWallets()
+const configs: Record<string, CreateConfigParameters> = {
+  5: {
+    chains: [goerli],
+    transports: { [goerli.id]: http() },
+  },
+  1: {
+    chains: [mainnet],
+    transports: { [mainnet.id]: http() },
+  },
+}
 
-const connectors = connectorsForWallets(
-  wallets,
-  { appName: 'Starter', projectId: ' ' },
-)
+const wallets = getDefaultWallets().wallets
 
 export const config = createConfig({
-  connectors,
-  chains: [goerli, mainnet, sepolia],
-  transports: {
-    [mainnet.id]: http(),
-    [sepolia.id]: http(),
-    [goerli.id]: http(),
-  },
+  connectors: connectorsForWallets(wallets, { appName: 'Starter', projectId: ' ' }),
+  ...configs[process.env.NEXT_PUBLIC_CHAIN_ID!],
 })
