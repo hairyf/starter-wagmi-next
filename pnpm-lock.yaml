@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@rainbow-me/rainbowkit':
-    specifier: 2.0.0-beta.2
-    version: 2.0.0-beta.2(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)(viem@2.5.0)(wagmi@2.5.4)
+    specifier: 2.0.4
+    version: 2.0.4(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)(viem@2.5.0)(wagmi@2.5.4)
   '@tanstack/react-query':
     specifier: ^5.17.19
     version: 5.17.19(react@18.2.0)
@@ -3007,8 +3007,8 @@ packages:
     resolution: {integrity: sha512-2LuNTFBIO0m7kKIQvvPHN6UE63VjpmL9rnEEaOOaiSPbZK+zUOYIzBAWcED+3XYzhYsd/0mD57VdxAEqqV52CQ==}
     dev: true
 
-  /@rainbow-me/rainbowkit@2.0.0-beta.2(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)(viem@2.5.0)(wagmi@2.5.4):
-    resolution: {integrity: sha512-sookd/7Rm9k8T3BgH2vQSb8FHImBKFvu4+YYmoxkB0pu9ySLYx/3k0t0N1b2q0DYw/z8xF4qeZm7DhotDPU2gw==}
+  /@rainbow-me/rainbowkit@2.0.4(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)(viem@2.5.0)(wagmi@2.5.4):
+    resolution: {integrity: sha512-kZdTXY0ZkFIgiHQKSCWs8wcTPAB//T9WPdxq0gSq7lzpVpDRl99X4qTe0Oq4WRoBM5QEzXKRKKgkyVNiLC6kwg==}
     engines: {node: '>=12.4'}
     peerDependencies:
       react: '>=17'
@@ -3020,7 +3020,6 @@ packages:
       '@vanilla-extract/dynamic': 2.1.0
       '@vanilla-extract/sprinkles': 1.6.1(@vanilla-extract/css@1.14.0)
       clsx: 2.1.0
-      i18n-js: 4.3.2
       qrcode: 1.5.3
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -5165,6 +5164,7 @@ packages:
 
   /bignumber.js@9.1.2:
     resolution: {integrity: sha512-2/mKyZH9K85bzOEfhXDBFZTGd1CTs+5IHpeFQo9luiBG7hghdC851Pj2WAhb6E3R6b9tZj/XKhbg4fum+Kepug==}
+    dev: true
 
   /binary-extensions@2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
@@ -7391,14 +7391,6 @@ packages:
     resolution: {integrity: sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==}
     dev: false
 
-  /i18n-js@4.3.2:
-    resolution: {integrity: sha512-n8gbEbQEueym2/q2yrZk5/xKWjFcKtg3/Escw4JHSVWa8qtKqP8j7se3UjkRbHlO/REqFA0V/MG1q8tEfyHeOA==}
-    dependencies:
-      bignumber.js: 9.1.2
-      lodash: 4.17.21
-      make-plural: 7.3.0
-    dev: false
-
   /i18next-browser-languagedetector@7.2.0:
     resolution: {integrity: sha512-U00DbDtFIYD3wkWsr2aVGfXGAj2TgnELzOX9qv8bT0aJtvPV9CRO77h+vgmHFBMe7LAxdwvT/7VkCWGya6L3tA==}
     dependencies:
@@ -8257,6 +8249,7 @@ packages:
 
   /lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: true
 
   /log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
@@ -8310,10 +8303,6 @@ packages:
     dependencies:
       pify: 4.0.1
       semver: 5.7.2
-    dev: false
-
-  /make-plural@7.3.0:
-    resolution: {integrity: sha512-/K3BC0KIsO+WK2i94LkMPv3wslMrazrQhfi5We9fMbLlLjzoOSJWr7TAdupLlDWaJcWxwoNosBkhFDejiu5VDw==}
     dev: false
 
   /makeerror@1.0.12:
