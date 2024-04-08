@@ -41,7 +41,7 @@
     "iconify-svgo-loader": "^1.0.3",
     "typescript": "^5",
     "unocss": "^0.59.0",
-    "unplugin-env-parsing": "^0.0.3",
+    "unplugin-env-parsing": "^0.0.5",
     "zx": "^7.2.3"
   }
 }
