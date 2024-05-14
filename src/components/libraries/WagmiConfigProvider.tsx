@@ -2,10 +2,10 @@ import type { WagmiProviderProps } from 'wagmi'
 import { WagmiProvider } from 'wagmi'
 import type { PropsWithChildren } from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { subscribeWallets } from '@/utils'
+import { subscribeClientsForEthersAdapters } from 'wagmi-ethers-adapters'
 
 function Subscribe() {
-  subscribeWallets()
+  subscribeClientsForEthersAdapters()
   return null
 }
 
