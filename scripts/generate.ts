@@ -21,7 +21,7 @@ async function main() {
 
   for (const file of files) {
     const jsonPath = path.join(baseAbisPath, file)
-    execSync(`abi-types-generator ${jsonPath} --output=${baseTypePath} --provider ethers_v5`)
+    execSync(`abi-types-generator ${jsonPath} --output=${baseTypePath} --provider ethers_v6`)
   }
 
   const contracts = files.map(file => file.split('.')[0])

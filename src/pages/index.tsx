@@ -1,12 +1,12 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { useAccount } from 'wagmi'
-import { getContract } from '@/utils'
+import { getEthersContract } from 'wagmi-ethers-adapters/ethers-v6'
 import { contracts } from '@/config'
 
 function Page() {
   const { address, isConnected } = useAccount()
   async function transfer() {
-    const erc20 = getContract(contracts.ERC20)
+    const erc20 = getEthersContract(contracts.ERC20)
     const transaction = await erc20.transfer(address!, 0)
     await transaction.wait()
   }
