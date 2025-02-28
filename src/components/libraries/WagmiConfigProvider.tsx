@@ -1,13 +1,9 @@
-import type { WagmiProviderProps } from 'wagmi'
-import { WagmiProvider } from 'wagmi'
+/* eslint-disable react/prefer-destructuring-assignment */
 import type { PropsWithChildren } from 'react'
+import type { WagmiProviderProps } from 'wagmi'
+import { SubscribeWagmiConfig } from '@harsta/client/wagmi'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { subscribeClientsForEthersAdapters } from 'wagmi-ethers-adapters'
-
-function Subscribe() {
-  subscribeClientsForEthersAdapters()
-  return null
-}
+import { WagmiProvider } from 'wagmi'
 
 export function WagmiConfigProvider(props: PropsWithChildren<WagmiProviderProps>) {
   const client = new QueryClient()
@@ -15,7 +11,7 @@ export function WagmiConfigProvider(props: PropsWithChildren<WagmiProviderProps>
   return (
     <WagmiProvider {...props}>
       <QueryClientProvider client={client}>
-        <Subscribe />
+        <SubscribeWagmiConfig />
         {props.children}
       </QueryClientProvider>
     </WagmiProvider>

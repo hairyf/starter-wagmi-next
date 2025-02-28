@@ -1,6 +1,6 @@
-import Image from 'next/image'
+import type { PropsWithChildren } from 'react'
 import { Inter } from 'next/font/google'
-import { PropsWithChildren } from 'react'
+import Image from 'next/image'
 import styles from './index.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -44,6 +44,7 @@ export default function Layout(props: PropsWithChildren) {
             priority
           />
         </div>
+
         {props.children}
 
         <div className={styles.grid}>

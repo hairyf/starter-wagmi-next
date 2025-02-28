@@ -1,10 +1,11 @@
-import Head from 'next/head'
-import { ReactNode } from 'react'
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
-import Layout from '@/layout'
-import { MountsProvider, WagmiConfigProvider } from '@/components'
+import type { ReactNode } from 'react'
+import { WagmiConfigProvider } from '@/components'
 import { config } from '@/config'
-import { useMounted } from '@/hooks'
+
+import Layout from '@/layout'
+import { Injector, useMounted } from '@hairy/react-lib'
+import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
+import Head from 'next/head'
 
 import '@/styles/globals.css'
 import '@rainbow-me/rainbowkit/styles.css'
@@ -21,14 +22,14 @@ export default function App({ Component, pageProps }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <MountsProvider
+      <Injector
         install={[
           { component: WagmiConfigProvider, props: { config } },
           { component: RainbowKitProvider },
         ]}
       >
         {mounted && layout(<Component {...pageProps} />)}
-      </MountsProvider>
+      </Injector>
     </>
   )
 }
