@@ -1,4 +1,3 @@
-/* eslint-disable react/prefer-destructuring-assignment */
 import type { PropsWithChildren } from 'react'
 import type { WagmiProviderProps } from 'wagmi'
 import { SubscribeWagmiConfig } from '@harsta/client/wagmi'
