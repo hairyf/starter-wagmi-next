@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "lnv -- next dev",
+    "dev": "lnv -- next dev --turbopack",
     "build": "lnv -- next build",
     "start": "lnv -- next start",
     "lint": "eslint .",
@@ -19,7 +19,7 @@
     "@tanstack/react-query": "^5.66.9",
     "@unocss/reset": "66.1.0-beta.3",
     "ethers": "^6.13.5",
-    "next": "14.1.0",
+    "next": "^15.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-use": "^17.6.0",
@@ -39,7 +39,7 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "harsta": "^0.9.9",
-    "iconify-svgo-loader": "^1.0.3",
+    "iconify-svgo-loader": "^1.0.5",
     "typescript": "^5.7.3",
     "unocss": "^0.60.4"
   }
