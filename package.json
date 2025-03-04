@@ -32,7 +32,7 @@
     "@types/node": "^20.17.19",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
-    "@unocss/eslint-plugin": "^65.5.0",
+    "@unocss/eslint-plugin": "^66.0.0",
     "@unocss/postcss": "latest",
     "eslint": "^9.21.0",
     "eslint-plugin-format": "^1.0.1",
@@ -41,6 +41,6 @@
     "harsta": "^0.9.9",
     "iconify-svgo-loader": "^1.0.5",
     "typescript": "^5.7.3",
-    "unocss": "^0.60.4"
+    "unocss": "^66.0.0"
   }
 }
